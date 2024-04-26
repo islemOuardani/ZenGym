@@ -2,13 +2,14 @@ package Model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Message implements Serializable {
     private String pseudo;
     private String message;
-    private LocalDateTime date;
+    private LocalTime date;
 
-    public Message(String pseudo, String message, LocalDateTime date) {
+    public Message(String pseudo, String message, LocalTime date) {
         this.pseudo = pseudo;
         this.message = message;
         this.date = date;
@@ -35,11 +36,11 @@ public class Message implements Serializable {
         this.message = message;
     }
 
-    public LocalDateTime getDate() {
+    public LocalTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalTime date) {
         this.date = date;
     }
 }
